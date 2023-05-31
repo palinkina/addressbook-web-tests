@@ -58,9 +58,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest2.cs" />
+    <Compile Include="addressbookTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
