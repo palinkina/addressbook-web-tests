@@ -7,13 +7,13 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 
-namespace addressbook_web_tests
+namespace WebAddressbookTests 
 {
     [TestFixture]
-    public class Addressbook
+    public class GroupCreationTests 
     {
-        private IWebDriver driver;
-        private StringBuilder verificationErrors;
+        private IWebDriver driver; 
+        private StringBuilder verificationErrors; 
         private string baseURL;
 
         [SetUp]
@@ -24,7 +24,7 @@ namespace addressbook_web_tests
             verificationErrors = new StringBuilder();
         }
 
-        [TearDown]
+        [TearDown] 
         public void TeardownTest()
         {
             try
@@ -39,7 +39,7 @@ namespace addressbook_web_tests
         }
 
         [Test]
-        public void TheAdressbokkTest()
+        public void GroupCreationTest()
         {
             driver.Navigate().GoToUrl(baseURL);
             driver.FindElement(By.Name("user")).Click();
@@ -49,19 +49,14 @@ namespace addressbook_web_tests
             driver.FindElement(By.XPath("//input[3]")).Click();
             driver.FindElement(By.LinkText("groups")).Click();
             driver.FindElement(By.Name("new")).Click();
-            driver.FindElement(By.Name("group_name")).Click();
             driver.FindElement(By.Name("group_name")).Clear();
             driver.FindElement(By.Name("group_name")).SendKeys("r");
-            driver.FindElement(By.Name("group_header")).Click();
             driver.FindElement(By.Name("group_header")).Clear();
             driver.FindElement(By.Name("group_header")).SendKeys("r");
-            driver.FindElement(By.Name("group_footer")).Click();
             driver.FindElement(By.Name("group_footer")).Clear();
             driver.FindElement(By.Name("group_footer")).SendKeys("r");
-            driver.FindElement(By.Name("submit")).Click();
-            driver.FindElement(By.Id("header")).Click();
+            driver.FindElement(By.Name("submit")).Click(); 
             driver.FindElement(By.LinkText("groups")).Click();
-            driver.FindElement(By.XPath("//*/text()[normalize-space(.)='']/parent::*")).Click();
             driver.FindElement(By.LinkText("Logout")).Click();
         }
     }
