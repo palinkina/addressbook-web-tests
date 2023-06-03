@@ -1,13 +1,27 @@
-﻿namespace WebAddressbookTests
+﻿using System;
+using System.Text;
+using NUnit.Framework;
+using OpenQA.Selenium;
+using OpenQA.Selenium.DevTools.V113.FedCm;
+using OpenQA.Selenium.Firefox;
+
+
+namespace WebAddressbookTests
 {
-    internal class AccountData
+    class AccountData
     {
         private string username;
         private string password;
+        
 
-        public AccountData (string username, string password)
+        public AccountData(string username, string password)
+        
         { this.username = username;
-            this.password = password;      
+          this.password = password;
+        }
+        public AccountData(string username)
+        {
+            this.username = username;
         }
 
         public string Username

@@ -59,9 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountData.cs" />
+    <Compile Include="ContactDate.cs" />
     <Compile Include="GroupDate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GroupCreationTests.cs" />
+    <Compile Include="ContactsCreationTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
