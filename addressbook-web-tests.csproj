@@ -64,6 +64,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GroupCreationTests.cs" />
     <Compile Include="ContactsCreationTests.cs" />
+    <Compile Include="GroupRemovalTest.cs" />
+    <Compile Include="TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -3,16 +3,20 @@
 namespace WebAddressbookTests
 {
     [TestFixture]
-    public class ContactsCreationTests : TestBase
+    public class GroupRemovalTests : TestBase
     {
+
         [Test]
-        public void ContactsCreationTest()
+        public void GroupRemovalTest()
         {
             Open();
             Login(new AccountData("admin", "secret"));
-            AddNewContact();
-            NewContact(new ContactDate("Polina", "Skryabina"));
+            GoToGroupPage();
+            SelectGroup(1);
+            RemoveGroup();
+            ReturnToGroupPage();
             Logout();
         }
     }
 }
+

@@ -8,7 +8,7 @@ using OpenQA.Selenium.Firefox;
 
 namespace WebAddressbookTests
 {
-    class AccountData
+    public class AccountData
     {
         private string username;
         private string password;
