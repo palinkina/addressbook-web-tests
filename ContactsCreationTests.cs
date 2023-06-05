@@ -9,7 +9,7 @@ namespace WebAddressbookTests
         public void ContactsCreationTest()
         {
             Open();
-            Login(new AccountData("admin", "secret"));
+            LoginHelper.Login(new AccountData("admin", "secret"));
             AddNewContact();
             NewContact(new ContactDate("Polina", "Skryabina"));
             Logout();

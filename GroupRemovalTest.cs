@@ -10,7 +10,7 @@ namespace WebAddressbookTests
         public void GroupRemovalTest()
         {
             Open();
-            Login(new AccountData("admin", "secret"));
+            LoginHelper.Login(new AccountData("admin", "secret"));
             GoToGroupPage();
             SelectGroup(1);
             RemoveGroup();

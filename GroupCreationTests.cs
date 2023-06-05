@@ -10,7 +10,7 @@ namespace WebAddressbookTests
         public void GroupCreationTest()
         {
             Open();
-            Login(new AccountData("admin", "secret"));
+            loginHelper.Login(new AccountData("admin", "secret"));
             GoToGroupPage();
             InitNewGroupCreation();
             GroupDate group = new GroupDate("aaa")

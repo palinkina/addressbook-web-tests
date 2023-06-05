@@ -2,10 +2,11 @@
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium;
 using System;
-//using System.Collections.Generic;
-//using System.Linq;
 using System.Text;
-//using System.Threading.Tasks;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 
 namespace WebAddressbookTests
 {
@@ -14,7 +15,8 @@ namespace WebAddressbookTests
         protected IWebDriver driver;
         private StringBuilder verificationErrors;
         protected string baseURL;
-
+        
+        protected LoginHelper loginHelper
 
         [SetUp]
         public void SetupTest()
@@ -22,6 +24,7 @@ namespace WebAddressbookTests
             driver = new FirefoxDriver();
             baseURL = "http://localhost/addressbook/";
             verificationErrors = new StringBuilder();
+            loginHelper = new LoginHelper(driver);
         }
         [TearDown]
         public void TeardownTest()
@@ -39,14 +42,6 @@ namespace WebAddressbookTests
         protected void Open()
         {
             driver.Navigate().GoToUrl(baseURL);
-        }
-        protected void Login(AccountData account)
-        {
-            driver.FindElement(By.Name("user")).Click();
-            driver.FindElement(By.Name("user")).SendKeys(account.Username);
-            driver.FindElement(By.Name("pass")).Click();
-            driver.FindElement(By.Name("pass")).SendKeys(account.Password);
-            driver.FindElement(By.XPath("//input[3]")).Click();
         }
         protected void OpenContactPage()
         {
