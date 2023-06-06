@@ -9,18 +9,19 @@ namespace WebAddressbookTests
         [Test]
         public void GroupCreationTest()
         {
-            Open();
+            navigator.Open();
             loginHelper.Login(new AccountData("admin", "secret"));
-            GoToGroupPage();
-            InitNewGroupCreation();
+            groupHelp.GoToGroupPage();
+            groupHelp.InitNewGroupCreation();
             GroupDate group = new GroupDate("aaa")
             {
                 Header = "bbb",
                 Footer = "ccc"
             };
-            FillGroupForm(group);
-            SubmitGroupCreation();
-            GoToGroupPage();
+            groupHelp.FillGroupForm(group);
+            groupHelp.SubmitGroupCreation();
+            groupHelp.GoToGroupPage();
+            loginHelper.Logout();
         }
     }
 }

@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OpenQA.Selenium;
 
-namespace addressbook_web_tests
+
+namespace WebAddressbookTests
 {
-    internal class NavigationHelper
+    public class NavigationHelper : HelperBase
     {
+        private string baseURL;
+
+        public NavigationHelper(IWebDriver driver, string baseURL)
+            : base(driver)
+        {
+            this.baseURL = baseURL;
+        }
+        public void Open()
+        {
+            driver.Navigate().GoToUrl(baseURL);
+        }
+        public void OpenContactPage()
+        {
+            driver.Navigate().GoToUrl("http://localhost/addressbook/");
+        }
     }
 }

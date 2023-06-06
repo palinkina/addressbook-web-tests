@@ -8,11 +8,11 @@ namespace WebAddressbookTests
         [Test]
         public void ContactsCreationTest()
         {
-            Open();
-            LoginHelper.Login(new AccountData("admin", "secret"));
-            AddNewContact();
-            NewContact(new ContactDate("Polina", "Skryabina"));
-            Logout();
+            navigator.Open();
+            loginHelper.Login(new AccountData("admin", "secret"));
+            contacter.AddNewContact();
+            contacter.NewContact(new ContactDate("Polina", "Skryabina"));
+            loginHelper.Logout();
         }
     }
 }
