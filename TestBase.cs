@@ -9,11 +9,8 @@ namespace WebAddressbookTests
 {
     public class TestBase
     {
-
-        protected Login_outHelper loginHelper;
-        protected NavigationHelper navigator;
-        protected GroupHelper groupHelp;
-        protected ContactHelper contacter;
+        protected IWebDriver driver;
+        protected string baseURL;
 
         protected ApplicationManager app;
 
