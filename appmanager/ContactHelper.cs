@@ -1,19 +1,18 @@
 ﻿using OpenQA.Selenium;
 
 
-
 namespace WebAddressbookTests
 {
     public class ContactHelper : HelperBase
     { 
-        public ContactHelper(ApplicationManager manager) : base(manager)
+        public ContactHelper(IWebDriver driver) : base(driver)
         {
         }
-    public ContactHelper AddNewContact()
+    public void AddNewContact()
         {
             driver.FindElement(By.LinkText("add new")).Click();
-            return this;
         }
+
         public ContactHelper NewContact(ContactDate contact)
         {
             driver.FindElement(By.Name("firstname")).Clear();
@@ -23,10 +22,11 @@ namespace WebAddressbookTests
             driver.FindElement(By.XPath("//input[21]")).Click();
             return this;
         }
+
         public ContactHelper AddContact()
         {
             AddNewContact();
-           NewContact(new ContactDate("Poli", "Nova"));
+           NewContact(new ContactDate("Polina", "Skryabina"));
             return this;
         }
     }
