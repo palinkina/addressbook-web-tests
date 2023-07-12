@@ -58,20 +58,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccountData.cs" />
-    <Compile Include="ApplicationManage.cs" />
-    <Compile Include="ContactDate.cs" />
-    <Compile Include="ContactHelper.cs" />
-    <Compile Include="GroupDate.cs" />
-    <Compile Include="GroupHelper.cs" />
-    <Compile Include="HelperBase.cs" />
-    <Compile Include="Login_outHelper.cs" />
-    <Compile Include="NavigationHelper.cs" />
+    <Compile Include="GroupModificationTests.cs" />
+    <Compile Include="model%281%29\AccountData.cs" />
+    <Compile Include="appmanger%281%29\ApplicationManage.cs" />
+    <Compile Include="model%281%29\ContactDate.cs" />
+    <Compile Include="appmanger%281%29\ContactHelper.cs" />
+    <Compile Include="model%281%29\GroupDate.cs" />
+    <Compile Include="appmanger%281%29\GroupHelper.cs" />
+    <Compile Include="appmanger%281%29\HelperBase.cs" />
+    <Compile Include="appmanger%281%29\Login_outHelper.cs" />
+    <Compile Include="appmanger%281%29\NavigationHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="GroupCreationTests.cs" />
-    <Compile Include="ContactsCreationTests.cs" />
-    <Compile Include="GroupRemovalTest.cs" />
-    <Compile Include="TestBase.cs" />
+    <Compile Include="tests%281%29\GroupCreationTests.cs" />
+    <Compile Include="tests%281%29\ContactsCreationTests.cs" />
+    <Compile Include="tests%281%29\GroupRemovalTests.cs" />
+    <Compile Include="tests%281%29\TestBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram3.cd" />

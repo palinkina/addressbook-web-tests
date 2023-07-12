@@ -5,13 +5,12 @@ using System;
 using System.Text;
 using System.Security.Policy;
 
+
 namespace WebAddressbookTests
+
 {
     public class TestBase
     {
-        protected IWebDriver driver;
-        protected string baseURL;
-
         protected ApplicationManager app;
 
         [SetUp]
@@ -19,20 +18,15 @@ namespace WebAddressbookTests
         {
             app = new ApplicationManager();
 
+            app.Navigator.GoToHomePage();
+            app.Auth.Login(new AccountData("admin", "secret"));
+
         }
 
         [TearDown]
         public void TeardownTest()
         {
-            try
-            {
-                driver.Quit();
-            }
-            catch (Exception)
-            {
-                // Ignore errors if unable to close the browser
-            }
-            Assert.AreEqual("", verificationErrors.ToString());
+            app.Stop();
         }  
     }
 }

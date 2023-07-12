@@ -5,7 +5,7 @@ namespace WebAddressbookTests
 {
     public class Login_outHelper : HelperBase
     {
-        public Login_outHelper(IWebDriver driver) : base(driver)
+        public Login_outHelper(ApplicationManager manager) : base(manager)
         {
         }
         public void Login(AccountData account)
