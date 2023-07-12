@@ -42,7 +42,6 @@ namespace WebAddressbookTests
             }
             catch (Exception)
             {
-                // Ignore errors if unable to close the browser
             }
         }
         public NavigationHelper Navigator

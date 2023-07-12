@@ -1,12 +1,4 @@
-﻿using System;
-using System.Text;
-using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.DevTools.V113.FedCm;
-using OpenQA.Selenium.Firefox;
-
-
-namespace WebAddressbookTests
+﻿namespace WebAddressbookTests
 {
     public class AccountData
     {
