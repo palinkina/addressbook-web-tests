@@ -10,7 +10,6 @@ namespace WebAddressbookTests
         }
         public GroupHelper Create(GroupDate group)
         {
-            //manager.Navigator.GoToHomePage();
             manager.Navigator.GoToGroupPage();
             InitNewGroupCreation();
             FillGroupForm(group);

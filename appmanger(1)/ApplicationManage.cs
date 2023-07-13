@@ -70,5 +70,7 @@ namespace WebAddressbookTests
                 return contacter;
             }
         }
+
+        public object ContactHelp { get; internal set; }
     }
 }
